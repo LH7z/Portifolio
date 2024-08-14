@@ -8,7 +8,6 @@ for (var i = 0; i < links.length; i++) {
 const nav = document.querySelector("nav")
 var oldScroll = window.scrollY
 window.onscroll = function() {
-  console.log(window.scrollY);
   if (oldScroll > window.scrollY) {
     nav.style.top = "0"
   } else {
@@ -31,7 +30,7 @@ const observer = new IntersectionObserver((entries) => {
 
     })
 },
-   { threshold: 0.5
+   { threshold: 0.6
    });
 //
   for (let i = 0; i < the_animation.length; i++) {
