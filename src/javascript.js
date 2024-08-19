@@ -23,14 +23,12 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('scroll-animation')
-        }
-            else {
+        } else {
                 entry.target.classList.remove('scroll-animation')
-            }
-
+              }
     })
 },
-   { threshold: 0.6
+   { threshold: 0.3
    });
 //
   for (let i = 0; i < the_animation.length; i++) {
