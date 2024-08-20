@@ -272,7 +272,7 @@ nav {
   position:absolute;
   top: 20px;
   display:inline-block;
-  width:250px;
+  width:100%;
   opacity:0;
   animation: slideme 6s infinite ease-in-out;
   text-transform: uppercase;
@@ -477,6 +477,135 @@ nav {
   #about {
     h1 {
       font-size: 4rem;
+    }
+  }
+}
+@media(min-width: 0) and (max-width: 735px) {
+  .container {
+    margin: auto;
+    width: calc(100% - 20px);
+  }
+  nav {
+    width: calc(100% - 20px);
+    padding: 10px;
+    h3 {
+      font-size: .7rem;
+    }
+  }
+  #nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: calc(60% - 20px);
+    li {
+      font-size: .7rem
+    }
+  }
+  #home {
+    height: calc(100vh + 20px);
+  }
+  .infos-perfil {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    img {
+      width: 100%;
+      height: fit-content;
+    }
+  }
+  .textos-work {
+    margin-bottom: 15px
+  }
+  #infos-home  {
+    display: grid;
+    grid-template-columns: 0 1fr;
+    h1 {
+      padding-left: 5%;
+      font-size: 1.2rem;
+    }
+  }
+  .codinfox-changing-keywords {
+    width: 0;
+  }
+  .hidden {
+    font-size: 1.5rem ;
+  }
+  .animation {
+    transform: translateX(0px);
+  }
+  .card-work {
+    margin-right: 0;
+    padding: 25px;
+  }
+  @keyframes slideme {
+    0% {
+      top: 20px;
+      opacity:0;
+    }
+    5% {
+      top: -4px;
+      opacity:1;
+    }
+    10%{
+      top : -4px;
+      opacity:1;
+    }
+    20%{
+      opacity:1;
+    }
+    25% {
+    opacity:0.1;
+      top :-4px;
+    }
+    30% {
+      opacity:0;
+      top: 20px;
+    }
+  }
+  #about {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: .8rem;
+    }
+    .links-about {
+      gap: 5px;
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  .hability {
+    h2 {
+      font-size: 1.5rem;
+    }
+    ul {
+      gap: 5px;
+      grid-template-columns: 1fr 1fr;
+      li {
+        font-size: .7rem;
+        span {
+          font-size: .9rem;
+        }
+      }
+    }
+    h4 {
+      width: 100%;
+    }
+    h3 {
+      padding: 10px 0;
+    }
+  }
+  .about {
+    height: fit-content;
+    padding: 10px;
+  }
+  .certificates {
+    grid-template-columns: 1fr;
+  }
+  #contact-link {
+    a {
+      font-size: 2rem;
     }
   }
 }
